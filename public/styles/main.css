@@ -1,0 +1,17 @@
+/* Color Pallete :
+#0078AA
+#3AB4F2
+#F2DF3A
+#F6F6F6
+ */
+
+:root {
+  --color-primary: #0078AA;
+  --color-secondary: #3AB4F2;
+  --color-accent: #F2DF3A;
+  --color-background: #F6F6F6;
+}
+
+body {
+  background-color: #F6F6F6;
+}

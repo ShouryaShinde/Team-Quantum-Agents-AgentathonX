@@ -74,7 +74,6 @@ ${text.slice(0, 3000)}
 
     const aiText = data.choices[0].message.content;
     
-
     res.json(data);
 
   } catch (error) {

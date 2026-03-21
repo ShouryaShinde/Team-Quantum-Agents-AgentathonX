@@ -14,10 +14,11 @@ app.get("/" , async (req , res) => {
   res.render("Home.ejs") ;
 });
 
+app.get("/dashboard" , async (req ,res) => {
+  res.render("dashboard.ejs") ;
+})
+
 app.listen(port , () => {
   console.log(`Listening on port https://localhost:${port}`) ;
 });
-const dashboardRoute = require('./routes/dashboard');
-app.use('/', dashboardRoute);
-console.log(`Listening on port https://localhost:${port}`) ;
 

@@ -9,16 +9,17 @@ const app = express() ;
 const port = process.env.PORT || 3000 ;
 
 app.use(express.static("public")) ;
+app.set("view engine", "ejs");
 
 app.get("/" , async (req , res) => {
-  res.render("Home.ejs") ;
+  res.render("Home") ;
 });
 
 app.get("/dashboard" , async (req ,res) => {
-  res.render("dashboard.ejs") ;
+  res.render("dashboard") ;
 })
 
 app.listen(port , () => {
-  console.log(`Listening on port https://localhost:${port}`) ;
+  console.log(`Listening on port http://localhost:${port}`) ;
 });
 

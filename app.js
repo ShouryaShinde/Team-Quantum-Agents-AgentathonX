@@ -17,3 +17,7 @@ app.get("/" , async (req , res) => {
 app.listen(port , () => {
   console.log(`Listening on port https://localhost:${port}`) ;
 });
+const dashboardRoute = require('./routes/dashboard');
+app.use('/', dashboardRoute);
+console.log(`Listening on port https://localhost:${port}`) ;
+

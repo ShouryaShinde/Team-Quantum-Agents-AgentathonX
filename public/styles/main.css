@@ -14,7 +14,23 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+.stat-hover {
+  transition: 0.25s;
+}
 
+.stat-hover:hover {
+  transform: translateY(-5px);
+  background: #EEEEEE;
+}
+
+.card-hover {
+  transition: all 0.25s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
 
 h1, h2, h3, h4, h5, h6 {
   text-wrap: balance;

@@ -47,3 +47,12 @@ router.get('/dashboard', (req, res) => {
 router.get('/loading', (req, res) => {
   res.send("Analyzing resume...");
 });
+
+//placholder function for future ai
+function getAIData() {
+  return {
+    score: 7,
+    skills: ["Node.js", "MongoDB"],
+    suggestions: ["Improve project descriptions"]
+  };
+}

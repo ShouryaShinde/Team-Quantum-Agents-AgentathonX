@@ -7,6 +7,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(express.static("public"));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json()); 
 
 app.set("view engine", "ejs");
@@ -20,6 +21,11 @@ app.get("/upload", (req, res) => {
   res.render("Upload");
 });
 
+app.get("/dashboard" , (req,res) => {
+  const data = JSON.parse(req.query.data);
+  res.render("dashboard", { result: data });
+})
+
 
 app.post("/analyze", async (req, res) => {
   try {
@@ -27,8 +33,6 @@ app.post("/analyze", async (req, res) => {
     if (!text) {
       return res.status(400).json({ error: "No text provided" });
     }
-
-
     const response = await fetch("https://integrate.api.nvidia.com/v1/chat/completions", {
       method: "POST",
       headers: {
@@ -50,8 +54,11 @@ Return in this exact format:
 
 { 
   "welcomeMessage": "A short friendly message addressing the user",
-  "rating": number (out of 10),
-  "atsScore": number (0-100),
+  "overallScore" : number (0 - 100) considering all parameters ,
+  "atsScore": number (0-100), 
+  "keywordOptimization" : number (0-100) ,
+  "formattingandStructure" : number (0-100) ,
+  "impactStatements" : number (0-100),
   "strongPoints": [array of strings],
   "weakPoints": [array of strings ],
   "suggestions": [Detailed with 5 to 10 sggestions]
@@ -69,13 +76,10 @@ ${text.slice(0, 3000)}
         max_tokens: 500
       })
     });
-
     const data = await response.json();
-
     const aiText = data.choices[0].message.content;
-    
-    res.json(data);
-
+    const parsedData = JSON.parse(aiText);
+    res.render("dashboard" , {result : parsedData});
   } catch (error) {
     console.error("Error:", error);
     res.status(500).json({ error: "Server error" });

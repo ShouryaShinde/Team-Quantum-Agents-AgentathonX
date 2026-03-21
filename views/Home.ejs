@@ -1,23 +1,27 @@
 <%- include("components/header.ejs") %>
 
-<div class="container py-5">
+<div class="pb-5 pt-3">
 
   <!-- HERO -->
-  <section class="text-center py-5">
-    <h1 class="fw-bold" style="color: #0078AA;">
-      AI Resume Analyzer
-    </h1>
-    <p class="text-muted mt-3 fs-5">
-      Analyze your resume & update your skills 🚀
-    </p>
-    <a href="/upload">
-      <button class="btn mt-3 px-4 py-2 text-white" 
-              style="background-color: #0078AA;">
-        Analyze Now
-      </button>
-    </a>
-    
-  </section>
+  <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg"> 
+  <div class="col-lg-7 p-3 p-lg-5 pt-lg-3"> 
+  <h1 class="display-4 fw-bold lh-1 text-body-emphasis">
+    <span style = "color : #0078AA">
+    AI-Powered</span> Resume Analysis for Smarter Career Growth
+  </h1> 
+  <p class="lead">
+    Upload your CV or resume and get instant insights on your ATS score, strengths, and areas for improvement. Our AI helps you optimize your resume to stand out and land better opportunities.
+  </p> 
+  <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
+  <a href= "/upload"> 
+    <button type="button" class="btn btn-lg px-4 me-md-2 fw-bold" style = "background-color : #F2DF3A ;color : #000000">Get Started</button>
+  </a>
+  </div> 
+  </div> 
+  <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg"> 
+  <img class="rounded-lg-3" src="/images/HeroSection.jpg" alt="" width="540"> 
+  </div> 
+  </div>
 
   <!-- FEATURES -->
   <section class="text-center mt-5">

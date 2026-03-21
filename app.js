@@ -14,6 +14,10 @@ app.get("/" , async (req , res) => {
   res.render("Home.ejs") ;
 });
 
+app.get("/upload" , async (req, res) => {
+  res.render("Upload.ejs") ;
+})
+
 app.listen(port , () => {
   console.log(`Listening on port https://localhost:${port}`) ;
 });

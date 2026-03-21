@@ -1,9 +1,5 @@
-/* Color Pallete :
-#0078AA
-#3AB4F2
-#F2DF3A
-#F6F6F6
- */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
 
 :root {
   --color-primary: #0078AA;
@@ -14,7 +10,26 @@
 
 body {
   background-color: #F6F6F6;
+  font-family: 'DM Sans', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
+
+
+
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+  font-family: "DM Sans" , sans-serif;
+  font-weight : 700 ;
+  font-style :normal ;
+}
+
+p {
+  text-wrap: pretty;
+  font-family: "DM Sans" , sans-serif;
+  font-weight : 400 ;
+  font-style :normal ;
+}
+
 
 .page-container {
   min-height: 100vh;

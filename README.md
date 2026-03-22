@@ -67,8 +67,8 @@ Upload your resume and get:
 |------|-------------|
 | **Frontend** | EJS / HTML / CSS / JavaScript / Bootstrap |
 | **Backend** | Node.js / Express.js |
-| **AI / NLP** | OpenAI API / NLP Libraries |
-| **File Handling** | Multer / PDF Parser |
+| **AI / NLP** | NVidia LLM 3 Model |
+| **File Handling** | pdf.js npm package |
 | **Deployment** | Render / Vercel |
 
 ---
@@ -95,3 +95,52 @@ Team-Quantum-Agents-AgentathonX/
 ├── package.json
 └── README.md
 ```
+# ⚙️ Installation & Setup
+## 1️⃣ Clone the repository
+```bash
+git clone https://github.com/YourUsername/CVision.git
+cd CVision
+```
+## 2️⃣ Install Dependencies
+```bash
+npm install
+```
+## 3️⃣ Set up environment variables
+Create a .env file in the root directory:
+```bash
+NVIDIA_API_KEY=your_nvidia_api_key
+```
+## 4️⃣ Run the app locally
+```bash
+node app.js
+```
+
+Visit: http://localhost:3000
+
+# 🧠 How It Works
+## Resume Upload 📄
+- User uploads a resume in PDF format.
+- Text Extraction 🔍
+## Extracts content using PDF parsing libraries.
+- AI Analysis 🤖
+- Evaluates resume structure
+- Extracts skills and keywords
+- Scores resume based on industry standards
+## Job Matching 🎯
+- Compares resume with job descriptions to calculate compatibility.
+- Suggestions & Feedback 💡
+- Provides actionable improvements for better ATS ranking.
+##⚡ Notes
+- AI responses may vary slightly based on input resume content.
+- Ensure resumes are well-formatted for accurate parsing.
+- API rate limits may affect response time.
+
+## 🛡️ License
+
+This project is licensed under the MIT License — see the LICENSE file for details.
+
+## ⭐ Support
+
+If you find CVision Resume Analyzer helpful, give it a ⭐ star on GitHub and share it with your network!
+
+“Build resumes that get noticed, not rejected.”
